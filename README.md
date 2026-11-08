@@ -40,6 +40,12 @@ You get a brief you can check before you meet anyone. Each fact tells you whethe
 - **[brief-md-client](./skills/brief-md-client/SKILL.md)**: for the client, guides them one file and one question at a time to write the brief with their own assistant, then packs it with its manifest.
 - **[brief-md-intake](./skills/brief-md-intake/SKILL.md)**: for the provider, reads what comes back as untrusted data, runs the check and writes a framing with a verdict, the blocking gaps, the contradictions and the questions for the first meeting.
 
+```bash
+npx skills add antidoteforai-netizen/product-skills --skill brief-md-kit --skill brief-md-client --skill brief-md-intake
+```
+
+[Read the guide (in French)](https://toolbox.opaline.design/guides/brief-projet-avec-ia/) · [Read the kit skill](./skills/brief-md-kit/SKILL.md) · [Read the checker](./skills/brief-md-intake/scripts/brief_lint.py)
+
 ## Project memory
 
 <picture>
@@ -56,6 +62,12 @@ An agent forgets everything between sessions, so you either explain the project 
 - **[learnings](./skills/learnings/SKILL.md)**: keeps in `LEARNINGS.md` the ways of working proven on this project, each with the observation that proves it.
 - **[checkpoint](./skills/checkpoint/SKILL.md)**: reviews the session, decides file by file whether an entry is earned, writes only those and rewrites the state.
 - **[ship](./skills/ship/SKILL.md)**: the last mile, a checklist that refuses to archive a delivered project while the README, a screenshot, the publication, the write-up or a recorded lesson is still missing.
+
+```bash
+npx skills add antidoteforai-netizen/product-skills --skill state --skill journal --skill decisions --skill blockers --skill learnings --skill checkpoint --skill ship
+```
+
+[Read the state skill](./skills/state/SKILL.md) · [Read the checkpoint skill](./skills/checkpoint/SKILL.md) · [Read the ship checklist](./skills/ship/CHECKLIST.md)
 
 Install the memory skills together, because `checkpoint` and `ship` rely on the others for the format of each file. They write into a `.memory/` folder at the root of the project rather than inside `.claude/`, which Claude Code protects from writing, and they reuse an existing folder such as `.claude/memory/` if your project already has one.
 
