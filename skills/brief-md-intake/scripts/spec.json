@@ -1,0 +1,43 @@
+{
+  "version": "0.2",
+  "tags": ["confirmed", "memory", "inferred", "unknown"],
+  "levels": {
+    "express": ["02-project", "03-customers", "06-pains-doubts", "07-constraints"],
+    "standard": ["00-summary", "01-company", "02-project", "03-customers", "04-market", "05-brand", "06-pains-doubts", "07-constraints"],
+    "complete": ["00-summary", "01-company", "02-project", "03-customers", "04-market", "05-brand", "06-pains-doubts", "07-constraints"]
+  },
+  "production_order": ["02-project", "03-customers", "07-constraints", "06-pains-doubts", "01-company", "04-market", "05-brand", "00-summary"],
+  "optional_sections": ["Questions to complete"],
+  "files": {
+    "00-summary": ["Index", "The 5 most important points", "Information to verify", "Missing information", "Sensitive data possibly present"],
+    "01-company": ["Identity", "Business in one sentence", "Offer", "Business model", "Key figures", "Organization and decision-making", "History and key moments", "Values: stated and actually lived", "Current tools and environment", "Questions to complete"],
+    "02-project": ["Goal in one sentence", "Why now", "Scope: included", "Scope: excluded", "Expected deliverables", "Success criteria", "Deadlines and milestones", "Budget", "Final decision-maker and stakeholders", "History", "Dependencies", "Questions to complete"],
+    "03-customers": ["Segments", "What customers say", "Customers the company does not want to target", "Current journey", "Questions to complete"],
+    "04-market": ["Current positioning", "Direct competitors", "Indirect competitors and substitutes", "What sets us apart", "Industry trends and threats", "Admired references", "Seasonality or business rhythm", "Questions to complete"],
+    "05-brand": ["Mission and promise", "Personality", "Tone of voice", "What the brand is not", "Existing assets", "Content that represents the brand well", "Words to use and words to avoid", "Questions to complete"],
+    "06-pains-doubts": ["Current frustrations", "What failed before, and why", "Doubts about this project", "Fears", "Sensitive topics or internal tensions", "What is rarely said in meetings", "Questions to complete"],
+    "07-constraints": ["Budget and deadlines", "Technical constraints", "Legal and regulatory constraints", "Available internal resources", "Required approvals", "Non-negotiables", "Access and items to provide to the provider", "Questions to complete"]
+  },
+  "blocking_fields": [
+    {"name": "goal", "file": "02-project", "section": "Goal in one sentence"},
+    {"name": "success criterion", "file": "02-project", "section": "Success criteria"},
+    {"name": "final decision-maker", "file": "02-project", "section": "Final decision-maker and stakeholders"},
+    {"name": "budget", "file": "02-project", "section": "Budget"},
+    {"name": "main deadline", "file": "02-project", "section": "Deadlines and milestones"},
+    {"name": "main target", "file": "03-customers", "section": "Segments"}
+  ],
+  "required_frontmatter": ["file", "project", "date", "version", "client_review"],
+  "manifest": {
+    "required": ["brief_md_version", "project", "date", "level", "mode", "llm_memory", "status", "files"],
+    "level": ["express", "standard", "complete"],
+    "mode": ["memory", "questionnaire", "hybrid", "unknown"],
+    "llm_memory": ["yes", "no", "unknown"],
+    "client_review": ["yes", "no"],
+    "visibility": ["shared", "in_person"]
+  },
+  "limits": {
+    "max_file_kb": 200,
+    "max_total_mb": 20,
+    "max_files": 100
+  }
+}

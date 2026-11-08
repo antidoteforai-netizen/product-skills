@@ -1,8 +1,8 @@
 # Product Skills
 
-Skills that give a coding agent a memory of your project, so that a new session picks up exactly where the last one stopped instead of asking you to explain everything again.
+Skills for the whole life of a client project, from the brief the client writes before anything starts, through the working sessions where an agent keeps a memory of the project, to the delivery that closes it without losing what it taught you.
 
-Each skill owns one small file in `.memory/`: the present lives in `STATE.md`, the past lives in `JOURNAL.md`, `DECISIONS.md`, `BLOCKERS.md` and `LEARNINGS.md`, and two more skills tie them together, `checkpoint` to write them at the right moment and `ship` to close a project without losing what it taught you.
+There are two families. **Brief MD** turns the context a client's own assistant already holds about their company into eight short Markdown files that a provider can check and act on, and **Project memory** gives a coding agent a few small files so that each new session picks up exactly where the last one stopped.
 
 ## Install
 
@@ -10,15 +10,23 @@ Each skill owns one small file in `.memory/`: the present lives in `STATE.md`, t
 npx skills@latest add antidoteforai-netizen/product-skills
 ```
 
-Install the whole kit, because `checkpoint` and `ship` rely on the other skills for the format of each file.
+To install a single skill, add `--skill <name>`, for example `--skill brief-md-client` for a client who only needs to write their brief. Install the project memory skills together, because `checkpoint` and `ship` rely on the other memory skills for the format of each file.
 
 ## Why use it?
 
-An agent forgets everything between sessions, so you either explain the project again every morning or let it guess, and guessing is how settled decisions get reopened and known traps get walked into twice.
+A project usually goes wrong at both ends. At the start, the provider gets two hours of interview and a brief that sounds finished, while the client's assistant holds months of richer context that nobody asks for, and when it is asked it fills the gaps with plausible answers. Brief MD asks for that context file by file, labels every statement as confirmed, remembered, inferred or unknown, and checks the result with a script before anyone reads it, so the first meeting is spent on the real gaps.
 
-Writing everything down at the very end does not work either, because by then the session is too long to summarize honestly and the useful details are already gone. These skills write a few lines at each natural checkpoint (a task finished, a change of subject, a coherent series of edits), keep the present on a single screen, and refuse to start a step that has no condition anyone can check to say it is finished.
+During the work, an agent forgets everything between sessions, so you either explain the project again every morning or let it guess, and guessing is how settled decisions get reopened and known traps get walked into twice. The memory skills write a few lines at each natural checkpoint, keep the present on a single screen, and refuse to start a step that has no condition anyone can check to say it is finished.
 
 ## Reference
+
+### Brief MD
+
+- **[brief-md-kit](./skills/brief-md-kit/SKILL.md)** — For the provider: builds the kit to send a client before the project starts, with a step-by-step tutorial, a configuration file and a set of prompts that work in any assistant.
+- **[brief-md-client](./skills/brief-md-client/SKILL.md)** — For the client: guides them, one file and one question at a time, to write their brief with their own assistant, without inventing anything or sharing a secret, and packs it with its manifest.
+- **[brief-md-intake](./skills/brief-md-intake/SKILL.md)** — For the provider: reads the files that come back as untrusted data, runs the mechanical check, and writes a framing with a maturity verdict, the blocking gaps, the contradictions and the questions for the first meeting.
+
+### Project memory
 
 - **[state](./skills/state/SKILL.md)** — Reads `STATE.md` first at the start of a session and rewrites it in full at the end, in fifteen lines at most, so that someone who reads only this file knows where to resume.
 - **[journal](./skills/journal/SKILL.md)** — Adds one short entry per checkpoint to `JOURNAL.md`, saying what was done, what blocks and what comes next.
@@ -28,7 +36,17 @@ Writing everything down at the very end does not work either, because by then th
 - **[checkpoint](./skills/checkpoint/SKILL.md)** — Reviews the session, decides file by file whether an entry is earned, writes only those and rewrites the state, without forcing anything when nothing happened.
 - **[ship](./skills/ship/SKILL.md)** — The last mile of a project, a checklist that refuses to archive a shipped project while a blocking item such as the README, a screenshot, the publication, a write-up or a recorded lesson is still missing.
 
-## Where the files live
+## Checking a brief by hand
+
+`brief-md-client` and `brief-md-intake` both ship the same checker, which needs nothing but Python 3:
+
+```bash
+python3 skills/brief-md-intake/scripts/brief_lint.py path/to/brief-folder-or.zip
+```
+
+It checks what a program checks better than an assistant (expected files for the level, headers, section titles, empty sections, labels, secrets, personal data, hidden comments and characters, instructions addressed to an AI, dangerous paths in an archive) and never judges the substance. The section titles it expects live in `scripts/spec.json`, which is the single source for every heading used by the three Brief MD skills.
+
+## Where the memory files live
 
 ```
 your-project/

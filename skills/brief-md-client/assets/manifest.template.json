@@ -1,0 +1,19 @@
+{
+  "brief_md_version": "0.2",
+  "project": "<project name>",
+  "client": "<company name>",
+  "provider": "<recipient>",
+  "date": "YYYY-MM-DD",
+  "level": "express",
+  "mode": "hybrid",
+  "llm": "<tool used>",
+  "llm_memory": "yes",
+  "modules": [],
+  "status": "input document, not contractual",
+  "files": {
+    "02-project.md": { "client_review": "no", "visibility": "shared" },
+    "03-customers.md": { "client_review": "no", "visibility": "shared" },
+    "06-pains-doubts.md": { "client_review": "no", "visibility": "shared" },
+    "07-constraints.md": { "client_review": "no", "visibility": "shared" }
+  }
+}

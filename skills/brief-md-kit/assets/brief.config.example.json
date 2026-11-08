@@ -1,0 +1,13 @@
+{
+  "brief_md_version": "0.2",
+  "project": "Redesign of the Example Bakery website",
+  "provider": "Dune Studio",
+  "project_type": "website",
+  "level": "express",
+  "sensitive_sector": false,
+  "send_via": "through the secure upload link that Dune Studio sent you",
+  "extra_questions": [
+    { "file": "02-project", "question": "Which pages of your current website must be kept?" },
+    { "file": "07-constraints", "question": "Who currently manages your domain name and your hosting?" }
+  ]
+}
