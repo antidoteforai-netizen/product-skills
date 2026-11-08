@@ -1,4 +1,4 @@
-# State — <project>
+# State: <project>
 Updated: YYYY-MM-DD
 
 ## Where it stands

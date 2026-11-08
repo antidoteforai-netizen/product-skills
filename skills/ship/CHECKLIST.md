@@ -1,4 +1,4 @@
-# Ship — <project>
+# Ship: <project>
 Status: <idea | active | paused | shipping | archived>
 Updated: YYYY-MM-DD
 

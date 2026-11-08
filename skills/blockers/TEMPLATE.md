@@ -4,7 +4,7 @@ Traps that already cost time, with their cause and the workaround. Read this fil
 
 ---
 
-## BLK-001 — <short title>
+## BLK-001: <short title>
 - **Date**:
 - **Symptom**:
 - **Cause**:

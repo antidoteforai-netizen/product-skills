@@ -14,7 +14,7 @@ A blocker and a learning differ in direction, since a blocker is a trap to avoid
 Use the format of [TEMPLATE.md](TEMPLATE.md), create the file from it if it does not exist, and number the entries LRN-001, LRN-002 and so on.
 
 ```
-## LRN-NNN — <short title>
+## LRN-NNN: <short title>
 - **Date**: YYYY-MM-DD
 - **Observation**: <what really happened, measured if possible>
 - **Rule**: <what to do systematically from now on>

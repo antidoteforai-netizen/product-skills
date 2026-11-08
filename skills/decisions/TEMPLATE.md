@@ -4,7 +4,7 @@ One entry per structural choice, written before the choice is carried out. Entri
 
 ---
 
-## DEC-001 — <short title>
+## DEC-001: <short title>
 - **Date**:
 - **Context**:
 - **Options**:

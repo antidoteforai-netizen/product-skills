@@ -12,10 +12,12 @@ Before we start {{PROJECT_NAME}}, I would like us to begin on a solid footing. R
 
 **Estimated time: {{DURATION}}.** You stay in control at every step.
 
-## What you gain
-- A kickoff meeting focused on your real stakes rather than on introductions
-- A project that is better aligned from the very first day
-- A reference document that you can reuse elsewhere
+## Why it is worth your time
+- You will not have to explain your business all over again, because your assistant already knows most of it: it drafts, and you only correct.
+- Our first meeting will be about your project and its real questions, rather than introductions.
+- You stay in control of what you share. You read every file, nothing is invented (a missing answer simply stays "unknown"), no password ever goes into a file, and the file about your doubts can stay for a face-to-face conversation if you prefer.
+- My quote and my plan will rest on what you actually said, which avoids unpleasant surprises later on.
+- You keep the files, and you can reuse them with anyone else you work with.
 
 ## Two ways to do it, so pick yours
 

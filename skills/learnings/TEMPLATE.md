@@ -4,7 +4,7 @@ Ways of working proven on this project, each with the fact that proves it. Writt
 
 ---
 
-## LRN-001 — <short title>
+## LRN-001: <short title>
 - **Date**:
 - **Observation**:
 - **Rule**:

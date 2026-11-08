@@ -24,7 +24,7 @@ When the same problem has resisted for about thirty minutes, or for three attemp
 Use the format of [TEMPLATE.md](TEMPLATE.md), create the file from it if it does not exist, and number the entries BLK-001, BLK-002 and so on.
 
 ```
-## BLK-NNN — <short title>
+## BLK-NNN: <short title>
 - **Date**: YYYY-MM-DD
 - **Symptom**: <what was seen, in plain words>
 - **Cause**: <the technical reason once it is known, or "unknown">

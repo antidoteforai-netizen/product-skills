@@ -20,7 +20,7 @@ Read the log first. If what you are about to propose contradicts a recorded deci
 Write the entry before carrying out the decision, not afterwards, with the format of [TEMPLATE.md](TEMPLATE.md), and create the file from it if it does not exist. Number the entries DEC-001, DEC-002 and so on, continuing from the last number in the file.
 
 ```
-## DEC-NNN — <short title>
+## DEC-NNN: <short title>
 - **Date**: YYYY-MM-DD
 - **Context**: <the constraint or the need that forces a choice>
 - **Options**: (a) ...; (b) ...
