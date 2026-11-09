@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use or adapt these skills or the Brief MD method, please cite them as below."
+title: "Product Skills: Brief MD and project memory skills for client projects run with AI"
+abstract: "Skills for designers, developers and studios who run client projects with AI, from the first brief to the delivery: Brief MD (kit, client, intake) and the project memory skills (state, journal, decisions, blockers, learnings, checkpoint, ship)."
+type: software
+authors:
+  - name: "Opaline Design"
+    website: "https://toolbox.opaline.design/"
+repository-code: "https://github.com/antidoteforai-netizen/product-skills"
+url: "https://toolbox.opaline.design/guides/brief-projet-avec-ia/"
+license: MIT
+date-released: "2026-11-09"
+keywords:
+  - agent-skills
+  - claude-code
+  - ai-agents
+  - client-brief
+  - brief-md
+  - project-memory
